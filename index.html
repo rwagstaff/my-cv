@@ -10,7 +10,7 @@
 
         :root {
             --primary: black;
-            --secondary: gray;
+            --secondary: #afa9a9;
             --background: white;
         }
 
@@ -53,6 +53,7 @@
         }
 
         h3 {
+            margin-bottom: 0px;
             font-size: 1em;
             font-weight: bold;
             color: var(--primary);
@@ -74,6 +75,10 @@
             color: var(--primary);
         }
 
+        .color-primary {
+          color: var(--primary);
+        }
+
 
         .job-title {
             font-size: 1.5rem;
@@ -89,14 +94,14 @@
             width: 70%;
             word-break: break-word;
             padding-right: 2rem;
-            border-right: 1px solid var(--primary);
         }
 
         .company {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .side-column > ul {
+            margin: 0px;
             list-style-type: none;
             padding: 5px;
         }
@@ -114,6 +119,30 @@
             margin-bottom: 0.25rem !important;
         }
 
+        .skills {
+
+        }
+
+        .skills > .bar-container {
+            display: flex;
+            margin-bottom: 4px;
+            padding: 5px;
+        }
+
+        .skills > .bar-container > .title {
+            font-size: 0.8em;
+            width: 65px;
+        }
+
+        .skills > .bar-container > .bar {
+            margin-top: 4px;
+            height: 10px;
+            width: 100%;
+        }
+
+
+
+
 
     </style>
 </head>
@@ -121,6 +150,37 @@
 <section class="d-flex justify-content-between">
 
     <aside class="side-column">
+        <h2 class="mt-0">Programming Languages</h2>
+        <section class="skills">
+
+            <div class="bar-container">
+                <span class="title">Java</span>
+                <div class="bar"
+                     style="background: linear-gradient(90deg, var(--primary) 80%, var(--secondary) 20%)"></div>
+            </div>
+            <div class="bar-container">
+                <span class="title">JavaScript</span>
+                <div class="bar"
+                     style="background: linear-gradient(90deg, var(--primary) 80%, var(--secondary) 20%"></div>
+            </div>
+            <div class="bar-container">
+                <span class="title">HTML</span>
+                <div class="bar"
+                     style="background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 20%"></div>
+            </div>
+            <div class="bar-container">
+                <span class="title">CSS</span>
+                <div class="bar"
+                     style="background: linear-gradient(90deg, var(--primary) 50%, var(--secondary) 20%"></div>
+            </div>
+            <div class="bar-container">
+                <span class="title">SQL</span>
+                <div class="bar"
+                     style="background: linear-gradient(90deg, var(--primary) 70%, var(--secondary) 20%"></div>
+            </div>
+
+
+        </section>
         <h2>Technologies</h2>
         <h3>Expertise (10+) years</h3>
         <ul class="mt-0">
@@ -203,6 +263,23 @@
             <li>Machine Learning</li>
             <li>Docker</li>
         </ul>
+        <h2>Academic Qualifications</h2>
+        <ul>
+            <li>Bsc (Hons) 2:1 Computing for Business - Aston University</li>
+            <li>AVCE I.T: A,B</li>
+            <li>A-levels: Economics C,</li>
+        </ul>
+        <h2>GitHub </h2>
+        <ul>
+            <a class="color-primary" href="https://github.com/rwagstaff">https://github.com/rwagstaff</a>
+        </ul>
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Football</li>
+            <li>Running</li>
+            <li>Badminton</li>
+            <li>Computer Games</li>
+        </ul>
     </aside>
     <main>
         <header>
@@ -222,7 +299,7 @@
             </section>
         </header>
         <section>
-            <h2>ABOUT ME</h2>
+            <h2>PERSONAL STATEMENT</h2>
             <section>I'm an enthusiastic full stack developer with a strong passion
                 for
                 creating
@@ -231,7 +308,9 @@
                 numerous
                 secure
                 web applications within the financial services industry.
-                I am looking to ....
+                I consider myself to be a programmer with a strong understanding in backend and frontend programming
+                languages,
+                including Java and JavaScript.
             </section>
         </section>
         <section>
@@ -246,12 +325,22 @@
             <h3>Stack: Java 11, Spring Boot, Angular, SQLServer.</h3>
 
             <ul>
-                <li>I migrated the website from AngularJS to Angular</li>
+                <li>Migrated the website from AngularJS to Angular</li>
+                <li>Developed an end-to-end test suite using Jest and Puppet</li>
+                <li>Lead the annual penetration test, then verified that the system met the latest security standards
+                </li>
+                <li>Implemented a password policy using <a
+                        href="https://pages.nist.gov/800-63-3/sp800-63b.html">NIST</a> guidelines. The system integrated
+                    with <a href="https://haveibeenpwned.com/Passwords">haveibeenpwned</a> in order to check whether
+                    users were entering good passwords.
+                </li>
+                <li>Maintained a high standard of code across all the programming languanges</li>
+                <li>Setup continuous integration using Jenkins, Python and Fabric</li>
             </ul>
 
         </section>
         <section class="company">
-            <h3>Databarracks (2013 – 2015)</h3>
+            <h3>Databarracks (2013 - 2015)</h3>
             <div>My role was to re-design the company Infrastructure as a Service portal. This allowed clients to
                 connect
                 to their infrastructure platform hosted on VMware. Being the only developer on the project this
@@ -269,7 +358,7 @@
                     protractor
                 </li>
                 <li>Integrated the java web server with a variety of VMware technologies.</li>
-                <li>Learned the required SDK’s to integrate to VMware products such as vCloud Director, Orchestrator
+                <li>Learned the required SDKs to integrate to VMware products such as vCloud Director, Orchestrator
                     and Chargeback Manager.
                 </li>
                 <li>Migrated the front end from JSP to AngularJS</li>
@@ -280,7 +369,7 @@
 
         </section>
         <section class="company">
-            <h3>Dion Global Solutions (2006 – 2013)</h3>
+            <h3>Dion Global Solutions (2006 - 2013)</h3>
             <div>I worked on a variety of projects including a front office wealth management system that allowed
                 users to manage high value portfolios. I also worked on the document warehousing website which
                 allowed people to view portfolios generated from a backend system.
@@ -295,7 +384,7 @@
                 <li>Researched CQRS and convinced the team that an event driven approach would increase
                     maintainability.
                 </li>
-                <li>Trained employees about the company’s software practices and the technologies used. I researched
+                <li>Trained employees about the company's software practices and the technologies used. I researched
                     books that I felt would introduce developers to professional quality code.
                 </li>
                 <li>Developing test suites to cover end to end scenarios ranging from acceptance testing to low
@@ -313,28 +402,6 @@
                     Provider which obtained quotes from the stock exchange
                 </li>
             </ul>
-        </section>
-        <section class="company">
-            <h2>GitHub </h2>
-            <div><a href="https://github.com/rwagstaff">https://github.com/rwagstaff</a></div>
-        </section>
-        <section class="company">
-            <h2>Academic Qualifications</h2>
-            <ul>
-                <li>Bsc (Hons) 2:1 Computing for Business - Aston University</li>
-                <li>AVCE I.T: A,B</li>
-                <li>A-levels: Economics C,</li>
-            </ul>
-        </section>
-        <section class="company">
-            <h2>Hobbies</h2>
-            <div>
-                I am a very active and outgoing individual. I enjoy playing various sports such as football,
-                badminton and golf. I have always played 11 a side football as this gives me team building and
-                leadership skills.
-                I am an avid runner and compete in half marathons in order to raise money for charity. I am also
-                a keen traveller and enjoy exploring new places as much as possible.
-            </div>
         </section>
         <section class="company">
             <h2>References</h2>
