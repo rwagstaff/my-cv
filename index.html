@@ -9,138 +9,162 @@
     <style>
 
         :root {
-            --primary: black;
-            --secondary: #afa9a9;
-            --background: white;
+          --primary: black;
+          --secondary: #afa9a9;
+          --background: white;
         }
 
         html {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 0.8em;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 0.8em;
         }
 
         body {
-            margin: 0;
-            padding: 0;
+          margin: 0;
+          padding: 0;
+          background-color: var(--background);
+          color: var(--primary);
+        }
+
+        .dark-mode {
+          --primary: white;
+          --background: black;
+          --secondary: orange;
+        }
+
+        .blue-mode {
+          --primary: #3f51b5;
+          --secondary: gold;
+          --background: lightgray;
         }
 
         .d-flex {
-            display: flex;
+          display: flex;
         }
 
 
         .justify-content-between {
-            justify-content: space-between;
+          justify-content: space-between;
         }
 
         .justify-content-center {
-            justify-content: center;
+          justify-content: center;
         }
 
         h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 0;
-            color: var(--primary);
+          font-size: 2.5em;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-bottom: 0;
+          color: var(--primary);
         }
 
         h2 {
-            font-size: 1.4em;
-            border-bottom: 3px solid var(--secondary);
-            text-transform: uppercase;
-            color: var(--primary);
+          font-size: 1.4em;
+          border-bottom: 3px solid var(--secondary);
+          text-transform: uppercase;
+          color: var(--primary);
         }
 
         h3 {
-            margin-bottom: 0px;
-            font-size: 1em;
-            font-weight: bold;
-            color: var(--primary);
+          margin-bottom: 0px;
+          font-size: 1em;
+          font-weight: bold;
+          color: var(--primary);
+        }
+
+        button {
+          background-color: transparent;
+          border: 0px;
+          text-decoration: underline;
+          color: var(--primary);
         }
 
         .header-column {
-            max-width: 30%;
-            width: 30%;
-            text-align: right;
+          max-width: 30%;
+          width: 30%;
+          text-align: right;
 
         }
 
         .contact-details {
-            padding: 1rem 4rem 1rem 4rem;
+          padding: 1rem 4rem 1rem 4rem;
         }
 
         .contact-details > div > a {
-            margin-left: 5px;
-            color: var(--primary);
+          margin-left: 5px;
+          color: var(--primary);
         }
 
         .color-primary {
           color: var(--primary);
         }
 
+        .color-secondary {
+          color: var(--secondary);
+        }
+
 
         .job-title {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            font-weight: bold;
-            border-bottom: 3px solid var(--secondary);
-            margin-bottom: 20px;
+          font-size: 1.5rem;
+          color: var(--secondary);
+          font-weight: bold;
+          border-bottom: 3px solid var(--secondary);
+          margin-bottom: 20px;
         }
 
 
         .side-column {
-            max-width: 30%;
-            width: 70%;
-            word-break: break-word;
-            padding-right: 2rem;
+          max-width: 30%;
+          width: 70%;
+          word-break: break-word;
+          padding-right: 2rem;
         }
 
         .company {
-            margin-bottom: 3.6rem;
+          margin-bottom: 3.6rem;
         }
 
         .side-column > ul {
-            margin: 0px;
-            list-style-type: none;
-            padding: 5px;
+          margin: 0px;
+          list-style-type: none;
+          padding: 5px;
         }
 
         main {
-            width: 80%;
-            padding-left: 2rem;
+          width: 80%;
+          padding-left: 2rem;
         }
 
         .mt-0 {
-            margin-top: 0;
+          margin-top: 0;
         }
 
         .mb-1 {
-            margin-bottom: 0.25rem !important;
+          margin-bottom: 0.25rem !important;
         }
 
-        .skills {
-
-        }
 
         .skills > .bar-container {
-            display: flex;
-            padding: 5px;
+          display: flex;
+          padding: 5px;
         }
 
         .skills > .bar-container > .title {
-            width: 90px;
+          width: 90px;
         }
 
         .skills > .bar-container > .bar {
-            margin-top: 4px;
-            height: 10px;
-            width: 100%;
+          margin-top: 4px;
+          height: 10px;
+          width: 100%;
         }
 
-
-
-
+        @media print {
+          .themes {
+            display: none;
+          }
+        }
 
 
     </style>
@@ -181,7 +205,7 @@
 
         </section>
         <h2>Technologies</h2>
-        <h3>Expertise (10+) years</h3>
+        <h3>Expertise (10+ years)</h3>
         <ul class="mt-0">
             <li>Java 11</li>
             <li>Spring</li>
@@ -189,10 +213,8 @@
             <li>JPA/Hibernate</li>
             <li>JUnit</li>
         </ul>
-        <h3>Major Experience (5+) years</h3>
+        <h3>Major Experience (5+ years)</h3>
         <ul>
-            <li>Python</li>
-            <li>Fabric</li>
             <li>JavaScript</li>
             <li>Angular</li>
             <li>Typescript</li>
@@ -202,6 +224,8 @@
             <li>HTML</li>
             <li>Gradle</li>
             <li>NodeJS</li>
+            <li>Python</li>
+            <li>Fabric</li>
         </ul>
         <h3>Web Servers</h3>
         <ul>
@@ -282,16 +306,23 @@
     <main>
         <header>
             <section>
-                <h1 class="mt-0">RICHARD WAGSTAFF</h1>
+                <div class="d-flex justify-content-between">
+                    <h1 class="mt-0">RICHARD WAGSTAFF</h1>
+                    <div class="d-flex themes">
+                        <button onclick="toggleTheme('')">Default</button>
+                        <button onclick="toggleTheme('dark-mode')">Dark</button>
+                        <button onclick="toggleTheme('blue-mode')">Blue</button>
+                    </div>
+                </div>
                 <div class="job-title">Full Stack Developer</div>
             </section>
             <section class="contact-details d-flex justify-content-between">
                 <div class="d-flex">
-                    <span class="material-icons-outlined">email</span>
+                    <span class="material-icons-outlined color-secondary">email</span>
                     <a href="mailto:richardwagstaff1984@gmail.com">richardwagstaff1984@gmail.com</a>
                 </div>
                 <div class="d-flex">
-                    <span class="material-icons-outlined">call</span>
+                    <span class="material-icons-outlined color-secondary">call</span>
                     <a href="tel:07731471453">07731471453</a>
                 </div>
             </section>
@@ -415,5 +446,14 @@
     </main>
 
 </section>
+<script>
+function toggleTheme(theme) {
+   var element = document.body;
+   element.classList = [theme];
+}
+
+
+
+</script>
 </body>
 </html>
